@@ -1,0 +1,21 @@
+
+.Conveyor{
+    box-sizing: border-box;
+    width: 80vw;
+    margin-top: 10px;
+    min-height: 40px;
+    background-color: rgb(56, 56, 56);
+}
+.Conveyor div{
+    animation: cov 10s linear;
+}
+
+@keyframes cov {
+    0%{
+        transform: translate(0px);
+    }
+    100%{
+        transform: translate(80vw);
+    }
+    
+}

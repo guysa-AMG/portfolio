@@ -1,0 +1,45 @@
+
+section{
+    background-color:#1d1d1d;
+    color: rgb(224, 224, 224);
+    display: flex;
+    left: 0px;
+    top: 0px;
+    width: 98vw;
+    height: 90vh;
+    padding:0px 50px;
+    text-rendering: geometricPrecision;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: safe;
+    border: 1px solid rgba(255, 255, 255, 0.473);
+}
+section:nth-child(2){
+color: #1d1d1d;
+background-color: rgb(224, 224, 224);
+}
+section h4{
+    padding: 0px 15px;
+    margin: 0px;
+
+    font-size: 30px;
+}
+section h1{
+    font-size: 80px;
+    text-transform: capitalize;
+    letter-spacing: -1.5px;
+}
+.type{
+    padding: 0px;
+    height: 110px;
+    font-family: var(--font-roboto-mono);
+    margin: 20px 0px 80px 0px ;
+}
+section Button{
+    position: relative;
+    height: 50px;
+    width: 150px;
+}
+
+
