@@ -5,17 +5,14 @@
     margin-top: 10px;
     min-height: 40px;
     background-color: rgb(56, 56, 56);
+    display:flex;
 }
-.Conveyor div{
-    animation: cov 10s linear;
+.Conveyor:nth-child(1) div{
+    transition: all 1s linear;
 }
-
-@keyframes cov {
-    0%{
-        transform: translate(0px);
-    }
-    100%{
-        transform: translate(80vw);
-    }
-    
+.Conveyor:nth-child(2) div{
+    transition: all 2s linear;
+}
+.Conveyor:nth-child(3) div{
+    transition: all 3s linear;
 }
