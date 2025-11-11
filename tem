@@ -1,0 +1,128 @@
+html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Multi-Row Conveyor Belt</title>
+    <style>
+        .conveyor-system {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .conveyor-row {
+            width: 100%;
+            height: 60px;
+            border: 1px solid #333;
+            margin-bottom: 10px;
+            overflow: hidden; /* Hides objects as they leave the row */
+            position: relative;
+            background-color: #f9f9f9;
+        }
+
+        .object {
+            width: 40px;
+            height: 40px;
+            background-color: dodgerblue;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: 0; /* JS will manage left position */
+        }
+    </style>
+</head>
+<body>
+    <div class="conveyor-system">
+        <div class="conveyor-row" id="row1"></div>
+        <div class="conveyor-row" id="row2"></div>
+        <div class="conveyor-row" id="row3"></div>
+        <div class="conveyor-row" id="row4"></div>
+    </div>
+
+    <script>
+        const SPEED = 150; // pixels per second
+        const OBJECT_WIDTH = 40; // must match CSS width
+        const rows = Array.from(document.querySelectorAll('.conveyor-row'));
+        const objectsInMotion = [];
+
+        class ConveyorObject {
+            constructor(rowElement) {
+                this.rowElement = rowElement;
+                this.element = document.createElement('div');
+                this.element.classList.add('object');
+                this.x = rowElement.clientWidth; // Start off-screen right, if needed, or 0
+                this.rowElement.appendChild(this.element);
+                objectsInMotion.push(this);
+                this.lastTime = performance.now();
+                
+                // Set initial position immediately
+                this.updateDOMPosition();
+            }
+
+            updateDOMPosition() {
+                // Use transform for performance
+                this.element.style.transform = `translateX(${this.x}px)`;
+            }
+
+            update(deltaTime) {
+                // Move left by speed * delta time
+                this.x -= SPEED * deltaTime; 
+                this.updateDOMPosition();
+
+                // Check if the object has completely left the row on the left side
+                if (this.x < -OBJECT_WIDTH) {
+                    this.moveToNextRow();
+                }
+            }
+
+            moveToNextRow() {
+                const currentRowIndex = rows.indexOf(this.rowElement);
+                const nextRowIndex = (currentRowIndex + 1) % rows.length; // Loop back to the first row
+                const nextRow = rows[nextRowIndex];
+
+                // 1. Remove from current DOM parent
+                this.rowElement.removeChild(this.element);
+
+                // 2. Reset position to the right edge of the new parent container
+                this.x = nextRow.clientWidth; 
+                this.rowElement = nextRow;
+                
+                // 3. Add to the new DOM parent and update position
+                this.rowElement.appendChild(this.element);
+                this.updateDOMPosition();
+            }
+        }
+
+        // The main animation loop
+        function animate(currentTime) {
+            const deltaTime = (currentTime - (animate.lastTime || currentTime)) / 1000; // time in seconds
+            animate.lastTime = currentTime;
+
+            // Update all objects currently tracked
+            for (const obj of objectsInMotion) {
+                obj.update(deltaTime);
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        // Start the animation loop
+        requestAnimationFrame(animate);
+
+        // Function to continuously add new objects to the first row
+        function generateObjects() {
+            // Start objects at the far right edge of the first row
+            new ConveyorObject(rows[0]); 
+            // Add a new object every 2 seconds
+            setTimeout(generateObjects, 2000); 
+        }
+        
+        // Start generating objects
+        generateObjects();
+
+    </script>
+</body>
+</html>
