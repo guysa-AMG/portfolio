@@ -5,6 +5,7 @@ body,html{
     font-family: var(--font-robotoc);
     width: 100vw;
     height: 300vh;
+    overflow-x: hidden;
 }
 nav ul{
     display: flex;
