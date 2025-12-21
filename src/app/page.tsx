@@ -47,6 +47,10 @@ export default function Home() {
     <section >
       <h2>Public Projects</h2>
       <ul className="ProjView">
+         <li><h3><a className="projLink" href="https://scentjozi-466018.uk.r.appspot.com/">Vicuna med</a></h3>
+        <p>Vicuna med is a flutter application built to serve the purpose of LLM reading and explaining medical note to patient without the compromise of privacy currently on Beta trial in playstore  </p></li>
+        
+
         <li><h3><a className="projLink" href="https://scentjozi-466018.uk.r.appspot.com/">ScentJozi</a></h3>
         <p>Scent Jozi is a demo ecommerce website built with react+nexjs with payfast intergrate as payment gateway. and firebase and supabase as third party used for storage and Authentication.   </p></li>
         
@@ -61,6 +65,7 @@ export default function Home() {
         
       </ul>
     </section>
+    
     <section>
       <h2>Participation and contribution</h2>
       <ul>
