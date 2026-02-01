@@ -2,10 +2,10 @@
 import "./layout.css"
 import "./styles/section.css"
 import "./styles/landingAnim.css"
-import "./script/animation";
 import { use } from "react";
 import Skills from "../components/frameworks";
 import {createTheme,ThemeProvider} from "@mui/material/styles";
+import GitHubContrib from "@/components/ghcontrib"
 
 import  { Person } from "@mui/icons-material";
 import Button from "@mui/material/Button";
@@ -84,8 +84,14 @@ Designed for developers who value transparency and speed</p></li>
       
       <h2>Participation and contribution</h2>
       <ul>
-        <li></li>
-        <li></li>
+        <li>
+          <h2>2025 Hactoberfest</h2>
+          
+          </li>
+        <li>
+        <h2>2025 NUMSA Discothon</h2>  
+          </li>
+
         <li></li>
       </ul>
     </section>
@@ -98,6 +104,7 @@ Designed for developers who value transparency and speed</p></li>
 
 
     </section>
+    
     
     </div>
     

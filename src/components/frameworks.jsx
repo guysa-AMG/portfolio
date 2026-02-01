@@ -1,7 +1,6 @@
 "use client";
 
 import "../app/styles/widgets.css"
-import "../app/script/animation.js"
 
 import { useEffect, useRef, useState } from "react";
 
