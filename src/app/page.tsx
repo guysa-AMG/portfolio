@@ -86,10 +86,12 @@ Designed for developers who value transparency and speed</p></li>
       <ul>
         <li>
           <h2>2025 Hactoberfest</h2>
-          
+          the 2025 Hacktoberfest was a fun challenge. i worked on issues the main reason for this hackathon was to influence open source 
+          contribution.
           </li>
         <li>
         <h2>2025 NUMSA Discothon</h2>  
+          
           </li>
 
         <li></li>
