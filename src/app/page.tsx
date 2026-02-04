@@ -91,7 +91,7 @@ Designed for developers who value transparency and speed</p></li>
           </li>
         <li>
         <h2>2025 NUMSA Discothon</h2>  
-          
+          i participated in the numsa discothon which was a 2 day of hands on building competiton on given topics such as GBV, Cyber Security, Energy crisis and community awerence of alternative energy it was intense i managed to rank in the top 5. i learnt alot from this discothon about time management and business aspect of technology.
           </li>
 
         <li></li>
