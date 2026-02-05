@@ -10,6 +10,7 @@ import GitHubContrib from "@/components/ghcontrib"
 import  { Person } from "@mui/icons-material";
 import Button from "@mui/material/Button";
 import TypingText from "@/components/ui/shadcn-io/typing-text";
+
 export default function Home() {
 
   function scrolldn(){
@@ -49,7 +50,7 @@ export default function Home() {
       <h2>Public Projects</h2>
       <ul className="ProjView">
          <li>
-          
+          <img className="proj-img" src="/playstore_vicuna.png" width="100%" height="100%"/>
           <h3><a className="projLink" href="https://scentjozi-466018.uk.r.appspot.com/">Vicuna med</a></h3>
           <div className="proj-creation"> created: 2025/11/26</div>
         <p>Vicuna med is a flutter application built to serve the purpose of LLM reading and explaining medical note to patient without the compromise of privacy currently on Beta trial in playstore  </p></li>
@@ -80,7 +81,7 @@ Designed for developers who value transparency and speed</p></li>
       </ul>
     </section>
     
-    <section>
+    <section className="contrib-section">
       
       <h2>Participation and contribution</h2>
       <ul>
@@ -96,6 +97,7 @@ Designed for developers who value transparency and speed</p></li>
 
         <li></li>
       </ul>
+      <img src="/prog.jpg"/>
     </section>
     <section>
 
