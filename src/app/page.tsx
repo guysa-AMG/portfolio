@@ -46,6 +46,21 @@ export default function Home() {
       <Button size="medium" variant="contained" onClick={()=>scrolldn()}>whoami</Button></div>
     </div>
        </section>
+       <section className="whoami">
+        <h2>Whoami?</h2>
+        im Guysa im a 25 year old Software Engineer and a high-velocity problem solver. Since 2020, I have cultivated a "10x" mindset—focusing on rapid learning, architectural efficiency, and building tools that serve as force multipliers for my teams.
+
+My versatility spans the entire stack, from building fluid mobile experiences to building high-throughput distributed systems. I don’t just deliver features; I automate the road to production while ensuring quality at speed.
+
+Technical Stack & Interests:
+
+ Back-end: Express Node.js (js/ts), Django(Python), ASP.NET (C#), and Solidity.
+ Front-end: React.js, Blaze, Angular, Next.js
+ Single/Cross-Platform: Kotlin KMP, Java Android, Dart Flutter and MAUI .net 
+ others: Unity games,raw network programming, low-level c/c++ Optimization , rest api, gRPC micro-services.
+
+I thrive in the "complex" and the "unsolved." Whether it’s writing smart contracts or optimizing low-level libraries, my goal is to deliver clean, scalable, and production-ready systems that solve real-world problems.
+       </section>
     <section className="proj" >
       <h2>Public Projects</h2>
       <ul className="ProjView">

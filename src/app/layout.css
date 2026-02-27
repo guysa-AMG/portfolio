@@ -49,3 +49,14 @@ color: white;
 .contrib-section::after{
     background-color: darkblue;
 }
+svg path{
+    color: aliceblue;
+}
+.whoami{
+    display: flex !important;
+    text-decoration: double;
+    height: 100vh !important;
+    text-transform: capitalize;
+    line-height: 2.5;
+    font-size: larger;
+}
