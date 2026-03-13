@@ -36,16 +36,26 @@ img.skillbadge{
 
 }
 .ProjView li{
-    width: 50vw;
+
     margin: 50px 0px;
     position: relative;
-    background-color:white;
+    color: #dbdbdb;
+   
+}
+.ProjView li img{
+
+    height: 200px;
+   
 }
 .projLink{
-    color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.935);
     font-weight: 600;
     text-decoration: none;
 }
 .projLink:hover{
     color: var(--variant-outlinedBorder);
+}
+.tit{
+    margin: 50px 50px 0px 50px;
+    
 }
