@@ -44,17 +44,22 @@ color: white;
 
 
 .contrib-section{
+    height: max-content;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    color: black !important;
 
+background: linear-gradient(90deg,rgb(255, 255, 255),transparent), url("/prog.jpg");
 }
-.contrib-section::after{
-    background-color: darkblue;
-}
+
+
 svg path{
     color: aliceblue;
 }
 .whoami{
     display: flex !important;
     text-decoration: double;
+    width: 95vw;
     height: 100vh !important;
     text-transform: capitalize;
     line-height: 2.5;

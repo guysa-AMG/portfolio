@@ -122,7 +122,7 @@ Designed for developers who value transparency and speed</p></li>
 
         <li></li>
       </ul>
-      <img src="/prog.jpg"/>
+      
     </section>
     <section>
 
